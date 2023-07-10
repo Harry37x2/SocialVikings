@@ -1,0 +1,71 @@
+:root {
+  --primary-color: #fff;
+  --secondary-color: #000;
+  --primary-accent: #e0e0e0;
+  --secondary-accent: #5c5c5c;
+  --fs-100: 1rem;
+  --fs-200: 1.25rem;
+  --fs-300: 2.25rem;
+  --fs-400: 2.5rem;
+}
+
+/* Box sizing */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Reset margins */
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+p,
+figure,
+picture {
+  margin: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  font-weight: 400;
+}
+
+body {
+  font-family: var(--ff-sans);
+  font-size: var(--fs-100);
+  color: hsl(var(--secondary-color));
+  background-color: hsl(var(--primary-color));
+  line-height: 1.5;
+  min-height: 100vh;
+  display: grid;
+  grid-template-rows: min-content 1fr;
+  overflow-x: hidden;
+}
+
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+* {
+  border: 1px solid red;
+}
+
+/*# sourceMappingURL=styles.css.map */
