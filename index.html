@@ -1,32 +1,59 @@
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=100vw, initial-scale=1.0">
     <title>Social Vikings</title>
     <link rel="stylesheet" href="styles.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato&family=Smooch+Sans:wght@700&display=swap" rel="stylesheet">
+    
+    <script src="index.js" defer></script>
 </head>
 <body>
     <header>
-        <div class="logo"></div>
+        <div class="logo">
+            <span>Logo</span>
+        </div>
         <nav>
-            <ul class="navigation">                
-                <li class="navigation__item">
-                    <a href="" class="navigation__link"></a>Link</li>
+            <ul class="navigation" data-visible="false">                
+                <li><a href="">Link</a></li>
+                <li><a href="">Link</a></li>
+                <li><a href="">Link</a></li>
+                <li><a href="">Link</a></li>
+                <li><a href="">Link</a></li>
             </ul>
         </nav>
-        <button class="button--primary">Button</button>
+        <svg class="mobile-nav-toggle" aria-controls="primary-navigation" aria-expanded="false" xmlns="http://www.w3.org/2000/svg" width="50" height="50" viewBox="0 0 50 50" fill="none">
+            <path fill-rule="evenodd" clip-rule="evenodd" d="M8.33333 10.4167C7.18275 10.4167 6.25 11.3494 6.25 12.5C6.25 13.6506 7.18275 14.5833 8.33333 14.5833H41.6667C42.8173 14.5833 43.75 13.6506 43.75 12.5C43.75 11.3494 42.8173 10.4167 41.6667 10.4167H8.33333ZM14.5833 25C14.5833 23.8494 15.5161 22.9167 16.6667 22.9167H41.6667C42.8173 22.9167 43.75 23.8494 43.75 25C43.75 26.1506 42.8173 27.0833 41.6667 27.0833H16.6667C15.5161 27.0833 14.5833 26.1506 14.5833 25ZM27.0833 37.5C27.0833 36.3494 28.016 35.4167 29.1667 35.4167H41.6667C42.8173 35.4167 43.75 36.3494 43.75 37.5C43.75 38.6506 42.8173 39.5833 41.6667 39.5833H29.1667C28.016 39.5833 27.0833 38.6506 27.0833 37.5Z" fill="white"/>
+        </svg>
+        <button class="button white nav-button">Button</button>
     </header>
     <main>
-        <section class="hero">
-            <h1>Lorem ipsum dolor sit amet!</h1>
-            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.</p>
-            <img src="https://s3-alpha-sig.figma.com/img/69af/0731/cb32191a9da1adba4f7159a3c93da1f0?Expires=1690156800&Signature=C5XcHUcDAvA6HIzEKIf43AsDWbp6E1XnO7s7uHRT3VC~7flJMBby6K6jV-qRhR~Fj1bA8bBAstIXsKE9VeMVfZzqPAhLq3Sx8rDIppULP0TpNERZPZWs4bk~NKzv-1E1THwwtckEK0ZjyQ1lAByppqjnunwVVu0CsaseVuP2W5X~4-3Udk5bfT4tUNxk7Hx1QxoW6Fly8JlBw~KMfn9rOS1gDTL78zKIhXrdjd2aJuNy2MwnsqBcYzDYA~dkktM~B2VqKa7MKmV-ahrCgkfOW27I-TfGvNXdzILPCBa8Olka-FoJSjGyULothS1RQlkand51kcNKAKlTFQzR53DPJQ__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4" alt="hero foto">
+        <section class="hero flex">
+            <div class="hero-text">
+                <h1>Lorem ipsum dolor sit amet!</h1>
+                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.</p>
+            </div>
+            <img src="img/hero-fire.png" alt="hero foto">
         </section>
-        <section class="offer">
-            <div class="offer__card">
+        <section class="offer flex">
+            <div class="card">
                 <h2>Lorem ipsum</h2>
                 <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.</p>
-                <button class="button--secondary">Button</button>
+                <button class="button black">Button</button>
+            </div>            
+            <div class="card">
+                <h2>Lorem ipsum</h2>
+                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.</p>
+                <button class="button black">Button</button>
+            </div>            
+            <div class="card">
+                <h2>Lorem ipsum</h2>
+                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.</p>
+                <button class="button black">Button</button>
             </div>            
         </section>
     </main>
