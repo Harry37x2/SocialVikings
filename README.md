@@ -1,5 +1,9 @@
 <p align="center">
-# Zadanie rekrutacyjne
+Zadanie rekrutacyjne
 <br/><br/>
-<img src="/img/logo.webp">
+<img src="dist/images/logo.webp">
+<br/><br/>
+- HTML+CSS+BEM
+- Navigacja mobilna - działa
+- Preprocesor SASS + GULP
 </p>
