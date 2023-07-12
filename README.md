@@ -3,7 +3,7 @@ Zadanie rekrutacyjne
 <br/><br/>
 <img src="dist/images/logo.webp">
 <br/><br/>
-- HTML+CSS+BEM
-- Navigacja mobilna - działa
-- Preprocesor SASS + GULP
+<span>- HTML+CSS+BEM</span>
+<span>- Navigacja mobilna - działa</span>
+<span>- Preprocesor SASS + GULP</span>
 </p>
