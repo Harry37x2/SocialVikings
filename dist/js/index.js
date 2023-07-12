@@ -1,0 +1,1 @@
+const nav=document.querySelector(".navigation"),navToggle=document.querySelector(".mobile-nav-toggle");navToggle.addEventListener("click",(()=>{"false"===nav.getAttribute("data-visible")?(nav.setAttribute("data-visible",!0),navToggle.setAttribute("aria-expanded",!0)):(nav.setAttribute("data-visible",!1),navToggle.setAttribute("aria-expanded",!1))}));

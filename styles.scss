@@ -49,7 +49,6 @@ p {
 body {
     font-family: $ff-lato;
     background-color: $primary-color;
-    min-height: 100vh;
     display: grid;
     grid-template-rows: min-content 1fr;
     overflow-x: hidden;
@@ -83,10 +82,10 @@ header {
     justify-content: space-between;
     align-items: center;
     padding: 0 1.5rem;
+    height: 5rem;
     background-color: $secondary-color;
     color: $primary-color;
     border-bottom: 1px solid $secondary-accent;
-    height: 5rem;
     flex-shrink: 0;
 }
 
@@ -94,9 +93,7 @@ header {
     color: $primary-color;
     font-family: $ff-smooch;
     font-size: 2.25rem;
-    font-style: normal;
     font-weight: 700;
-    line-height: normal;
 }
 
 nav {
@@ -112,9 +109,7 @@ nav {
         list-style-type: none;
         font-family: $ff-smooch;
         font-size: $fs-200;
-        font-style: normal;
         font-weight: 700;
-        line-height: normal;
     }
     a {
         text-decoration: none;
@@ -127,53 +122,55 @@ nav {
 }
 
 main {
-    margin: 0rem auto;
+    margin: 0rem clamp(1rem, 2rem, 9rem);
 }
 
 .hero {
-    padding-top: 10rem;
-    gap: 4rem;
+    margin-top: 10rem;
+    display: flex;
+    flex-wrap: wrap-reverse;
+    // display: grid;
+    // grid-template-columns: 1fr 1fr;
 }
-
-
 
 .hero-text {
     text-align: center;
+    margin: 2rem 5.2rem;
+    max-width: 31em;
+    justify-self: right;
+    
     h1 {
         color: $secondary-color;
+        white-space: nowrap;
         
         font-size: $fs-400;
-        font-style: normal;
         font-weight: 700;
-        line-height: normal;
     }
     p {
         padding-top: 1.25rem;
         display: flex;
-        width: 31.25rem;
+        // width: 31.25rem;
         flex-direction: column;
         flex-shrink: 0;
         
         color: $secondary-color;
-        font-family: $ff-lato;
         font-size: $fs-100;
-        font-style: normal;
         font-weight: 400;
         line-height: normal;
     }
-    img {
-        width: 35.5rem;
-        height: 25.25rem;
-        flex-shrink: 0;
-    }
+}
+
+.hero > img {
+    flex-shrink: 0;
 }
 
 .offer {
     display: flex;
     align-items: center;
-    justify-content: space-between;  
-    padding: 13rem 0;
-    gap: 3rem;
+    justify-content: center;  
+    flex-wrap: wrap;
+    margin: 13rem 0 17.25rem 0;
+    gap: 7.8rem;
 }
 
 .card {
@@ -182,33 +179,26 @@ main {
 
     text-align: center;
     width: 18.75rem;
-    height: 26.25rem;
     flex-shrink: 0;
-}
+    padding: 2rem 0;
+    h2 {       
+        font-family: $ff-smooch;
+        font-size: $fs-400;
+        font-weight: 700;
+    }
+    p {
+        color: $secondary-color;
+        text-align: center;
+        margin: 1.25rem 1.87rem;
+        
+        font-size: 1rem;
+        font-weight: 400;
 
-.card h2 {
-    padding-top: 2rem;
-
-    font-family: $ff-smooch;
-    font-size: $fs-400;
-    line-height: normal;
-}
-
-.card p {
-    color: #000;
-    text-align: center;
-    margin: 1.25rem 1.9rem;
-
-    font-family: $ff-lato;
-    font-size: 1rem;
-    font-style: normal;
-    font-weight: 400;
-    line-height: normal;
+    }
 }
 
 footer {
     height: 3.75rem;
-    flex-shrink: 0;
     background-color: $primary-accent;
     display: flex;
     align-items: center;
@@ -216,9 +206,6 @@ footer {
 
     font-family: $ff-smooch;
     font-size: $fs-100;   
-    line-height: normal;
-    font-style: normal;
-    line-height: normal;
 }
 
 @mixin button-style($color: $primary-color, $color2: $secondary-color) {
@@ -242,15 +229,16 @@ footer {
 
     font-family: $ff-smooch;
     font-size: $fs-200;
-    font-style: normal;
     font-weight: 700;
-    line-height: normal;
 }
 
-$small: 428px;
-// $small: 700px;
+$small: 480px;
+// $medium: 700px;
 
   @media screen and (max-width: $small) {
+    header {
+        padding: 0 1rem;
+    }
     nav {
         ul {
             position: fixed;
@@ -278,31 +266,33 @@ $small: 428px;
         z-index: 200;
     }
     main {
-        margin: 0;
+        margin: 0 auto;
     }
-    .hero {
-        flex-direction: column-reverse;   
-        margin: 0 auto;  
-        padding: 1.25rem;  
-        gap: 1rem; 
-        img {
-            width: 24.25rem;
-            height: 17rem;
-            flex-shrink: 0;
+    .hero {        
+        display: grid;
+        grid-template-columns: 1fr; 
+        margin: 1.25rem;  
+        // gap: 1rem; 
+        div {
+            // padding: 1rem 0;
+            margin: 0 auto;
         }
         h1 {
+            padding: 1.25rem 0 1.6rem 0;
             font-size: $fs-250;
         }
         p {
-            width: 24.25rem;
-            height: 9.9375rem;
+            padding: 0;
         }
     }
-    .offer {
-        flex-direction:column;
-        padding: 5rem 0;        
+    .hero > img {
+            flex-shrink: 0;
+            grid-row: 1;
+        
     }
-    .card {
-        margin: 0 4rem;
+    .offer {
+        // flex-direction:column;
+        margin: 3.75rem 0 6.25rem 0;  
+        gap: 3.1rem;      
     }
   }
